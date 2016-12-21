@@ -1,0 +1,29 @@
+{
+  "name": "tangle",
+  "version": "1.0.0",
+  "description": "A portfolio.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanglestudios/Portfolio.git"
+  },
+  "author": "Joseph Burton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanglestudios/Portfolio/issues"
+  },
+  "homepage": "https://github.com/tanglestudios/Portfolio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}

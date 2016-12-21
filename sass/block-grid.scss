@@ -1,0 +1,59 @@
+@import "grid";
+
+.block{
+	padding: 10px 10px 0 10px;
+	background-color: #cccccc;
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin-bottom: 15px;
+}
+
+.block > img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	
+}
+
+.block::after, .block::before{
+	content: " ";
+	display: table;
+}
+
+.block::after{
+clear: both;
+}
+
+.block:first-child{
+	margin-right: 15px;
+}
+
+.block:not(:nth-child(2)){
+	margin-left: 15px;
+}
+
+@media (max-width: 414px){
+	.block{
+	background-color: #cccccc;
+	float: left;
+	width: 100%;
+	height: auto;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.row .column > img{
+overflow: hidden;
+}
+
+.block > img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	
+}
+
+}

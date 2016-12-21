@@ -1,7 +1,18 @@
 $grid-column-count: 12 !default;
 $grid-row-width: 75rem;
-$grid-gutter-width:(
-small: 20px,
-normal: 30px
-) !default;
-$global-font-size: 16px !global;
+$grid-gutter-width:( small: 20, normal: 30);
+$global-font-size: 16 !global;
+$breakpoints:( medium: 640px, large: 900px) !default;
+
+
+	$white: #fefefe;
+	$black:  #0f0f0f;
+	$blue:   #0000e6;
+	$purple: #660066;
+	$yellow: #ffff00;
+	$pink: #ffb3bb;
+	$brown: #a52a2a;
+	$gold: #ffd700;
+	$column-bg: #e6e6e6;
+	$row-bg: #b3b3b3;
+	$body-bg: #f9f9f9;

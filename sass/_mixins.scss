@@ -1,11 +1,60 @@
-@mixin to-row{
-	max-width: $grid-row-width;
-	margin-left: auto;
-	margin-right: auto;
+@import "varables";
+
+@function strip-unit($param){
+	@return $param / ($param * 0 + 1);
 }
 
-@mixin to-column{
-	float: left;
-	margin-left: auto;
-	margin-right: auto;
+
+@function to-rem($param){
+	@return strip-unit($param) / strip-unit($global-font-size) * 1rem; 
 }
+
+
+
+@mixin root{
+	font-size: $global-font-size;
+	box-sizing: border-box;
+}
+
+@mixin universal{
+	*, *:before,*:after{
+		box-sizing: inherit;
+	}
+}
+
+@mixin body{
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-weight: normal;
+	line-height: 1.6180339887;
+	color: $black;
+	background: $white;
+	-weblit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	}
+	
+	@mixin row{
+		max-width: 80rem;
+		margin-right: auto;
+		margin-left: auto;
+		
+			&:before, &:after{
+				content: " ";
+				display: table;
+			}
+			
+			&:after{
+				clear: both;
+			}
+	}
+	
+	@mixin column{
+		width: 100%;
+		float: left;
+		padding-left: to-rem(15px);
+		padding-right: to-rem(15px);
+	}
+	
+	
+	
